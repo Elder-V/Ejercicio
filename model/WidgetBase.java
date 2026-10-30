@@ -1,4 +1,6 @@
-public abstract class WidgetBase implements Widget {
+package model;
+
+public abstract class WidgetBase implements Renderizable {
     private static int contador = 1;
 
     private final int id;
@@ -17,6 +19,6 @@ public abstract class WidgetBase implements Widget {
 
     @Override
     public String toString() {
-        return String.format("[%d] %-18s (%d KB)", id, nombre, memoriaKB);
+        return String.format("[%d] %s (%d KB)", id, nombre, memoriaKB);
     }
 }
